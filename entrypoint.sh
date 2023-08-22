@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd "$GITHUB_WORKSPACE" || exit
-go-callvis $GRAPH_ARGS
+go-callvis -file "$GRAPH_OUTPUT" -format png $GRAPH_ARGS
