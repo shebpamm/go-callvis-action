@@ -5,7 +5,7 @@ inputs:
   output:
     description: "Output file name"
     required: true
-    default: "callgraph.png"
+    default: "callgraph"
   callvis-args:
     description: "Args passed to go-callvis"
     required: true
