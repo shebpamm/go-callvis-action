@@ -1,0 +1,18 @@
+---
+name: "Go callgraph generation"
+description: "Generate a call graph and open a PR containing it"
+inputs:
+  output:
+    description: "Output file name"
+    required: true
+    default: "callgraph.png"
+  callvis-args:
+    description: "Args passed to go-callvis"
+    required: true
+    default: "."
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    GRAPH_OUTPUT: ${{ inputs.output }}
+    GRAPH_ARGS: ${{ inputs.callvis-args }}
