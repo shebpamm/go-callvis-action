@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd "$GITHUB_WORKSPACE" || exit
-mkdir -p "$(dirname "$GRAPH_OUTPUT_DIR")"
+mkdir -p "$(dirname "$GRAPH_OUTPUT")"
 
 GRAPH_OUTPUT=$(echo "$GRAPH_OUTPUT" | sed 's/\.[^.]*$//') # Remove extension from the file name
 
